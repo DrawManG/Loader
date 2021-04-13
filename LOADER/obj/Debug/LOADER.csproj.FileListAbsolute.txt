@@ -1,0 +1,15 @@
+C:\Users\Пользователь\source\repos\LOADER\LOADER\bin\Debug\LOADER.exe.config
+C:\Users\Пользователь\source\repos\LOADER\LOADER\bin\Debug\LOADER.exe
+C:\Users\Пользователь\source\repos\LOADER\LOADER\bin\Debug\LOADER.pdb
+C:\Users\Пользователь\source\repos\LOADER\LOADER\obj\Debug\LOADER.csprojAssemblyReference.cache
+C:\Users\Пользователь\source\repos\LOADER\LOADER\obj\Debug\MainWindow.g.cs
+C:\Users\Пользователь\source\repos\LOADER\LOADER\obj\Debug\App.g.cs
+C:\Users\Пользователь\source\repos\LOADER\LOADER\obj\Debug\LOADER_MarkupCompile.cache
+C:\Users\Пользователь\source\repos\LOADER\LOADER\obj\Debug\LOADER_MarkupCompile.lref
+C:\Users\Пользователь\source\repos\LOADER\LOADER\obj\Debug\MainWindow.baml
+C:\Users\Пользователь\source\repos\LOADER\LOADER\obj\Debug\LOADER.g.resources
+C:\Users\Пользователь\source\repos\LOADER\LOADER\obj\Debug\LOADER.Properties.Resources.resources
+C:\Users\Пользователь\source\repos\LOADER\LOADER\obj\Debug\LOADER.csproj.GenerateResource.cache
+C:\Users\Пользователь\source\repos\LOADER\LOADER\obj\Debug\LOADER.csproj.CoreCompileInputs.cache
+C:\Users\Пользователь\source\repos\LOADER\LOADER\obj\Debug\LOADER.exe
+C:\Users\Пользователь\source\repos\LOADER\LOADER\obj\Debug\LOADER.pdb

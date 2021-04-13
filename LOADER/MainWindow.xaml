@@ -1,0 +1,22 @@
+﻿<Window x:Class="LOADER.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:LOADER"
+        mc:Ignorable="d"
+        Title="LOADER" Height="150.4" Width="306.8" Loaded="Window_Loaded" ResizeMode="NoResize">
+    <Window.Background>
+        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+            <GradientStop Color="#FFEFF7FF" Offset="0"/>
+            <GradientStop Color="{DynamicResource {x:Static SystemColors.ActiveCaptionColorKey}}" Offset="1"/>
+        </LinearGradientBrush>
+    </Window.Background>
+    <Grid x:Name="Setka">
+        <Label Content="Выберите название проекта" HorizontalAlignment="Left" VerticalAlignment="Top" Height="25" Width="222" Margin="21,6,0,0"/>
+        <ComboBox x:Name="Combo" HorizontalAlignment="Left" Margin="21,31,0,0" VerticalAlignment="Top" Width="254"/>
+        <Button x:Name="start_loading" Content="Скачать на рабочий стол" HorizontalAlignment="Left" Margin="21,55,0,0" VerticalAlignment="Top" Width="254" Height="23" Click="start_loading_Click" PreviewMouseLeftButtonDown="start_loading_PreviewMouseLeftButtonDown"  />
+        <ProgressBar x:Name="Status" HorizontalAlignment="Left" Height="24" Margin="21,83,0,0" VerticalAlignment="Top" Width="254"/>
+
+    </Grid>
+</Window>
