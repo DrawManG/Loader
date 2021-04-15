@@ -3,6 +3,8 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        
+        
         xmlns:local="clr-namespace:LOADER"
         mc:Ignorable="d"
         Title="LOADER" Height="150.4" Width="306.8" Loaded="Window_Loaded" ResizeMode="NoResize">
@@ -14,9 +16,15 @@
     </Window.Background>
     <Grid x:Name="Setka">
         <Label Content="Выберите название проекта" HorizontalAlignment="Left" VerticalAlignment="Top" Height="25" Width="222" Margin="21,6,0,0"/>
-        <ComboBox x:Name="Combo" HorizontalAlignment="Left" Margin="21,31,0,0" VerticalAlignment="Top" Width="254"/>
-        <Button x:Name="start_loading" Content="Скачать на рабочий стол" HorizontalAlignment="Left" Margin="21,55,0,0" VerticalAlignment="Top" Width="254" Height="23" Click="start_loading_Click" PreviewMouseLeftButtonDown="start_loading_PreviewMouseLeftButtonDown"  />
-        <ProgressBar x:Name="Status" HorizontalAlignment="Left" Height="24" Margin="21,83,0,0" VerticalAlignment="Top" Width="254"/>
+        <ComboBox x:Name="Combo" HorizontalAlignment="Left" Margin="21,36,0,0" VerticalAlignment="Top" Width="254" Height="23"/>
+        <Button x:Name="start_loading" Content="Скачать на рабочий стол" HorizontalAlignment="Left" Margin="21,72,0,0" VerticalAlignment="Top" Width="254" Height="32" Click="start_loading_Click" PreviewMouseLeftButtonDown="start_loading_PreviewMouseLeftButtonDown"  />
+        <Grid x:Name="STOP_LAUNCHER" HorizontalAlignment="Left" Height="121" VerticalAlignment="Top" Width="301" Background="#FFDADADA" Visibility="Hidden">
+            <Viewbox x:Name="_123" HorizontalAlignment="Left" Height="100" Margin="98,0,0,0" VerticalAlignment="Top" Width="100" Stretch="Fill"/>
+            <ProgressBar x:Name="Status" HorizontalAlignment="Left" Height="24" Margin="20,76,0,0" VerticalAlignment="Top" Width="254"/>
+            <Label Content="Подождите завершения загрузки." HorizontalAlignment="Left" Margin="54,10,0,0" VerticalAlignment="Top"/>
+            <Label Content="После завершения загрузки, будет всё доступно!" HorizontalAlignment="Left" Margin="26,38,0,0" VerticalAlignment="Top"/>
+
+        </Grid>
 
     </Grid>
 </Window>

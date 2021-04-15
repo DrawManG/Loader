@@ -8,6 +8,6 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("4003977-christmas-emoji-santa-sleep-tired_112988.ico")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("1495.gif")]
 
 

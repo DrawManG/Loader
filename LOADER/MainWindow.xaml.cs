@@ -25,7 +25,7 @@ namespace LOADER
         public MainWindow()
         {
             InitializeComponent();
-
+         
         }
         string PATH_FOR_LOAD = @"\\192.168.0.1\files\Прикладные программы\TestFolder\";
         private void Window_Loaded(object sender, RoutedEventArgs e)
@@ -43,8 +43,8 @@ namespace LOADER
         private void start_loading_Click(object sender, RoutedEventArgs e)
         {
 
-            start_loading_TextInput();
-            Setka.Visibility = Visibility.Visible;
+            
+            
         }
 
         
@@ -87,10 +87,11 @@ namespace LOADER
 
         private void start_loading_TextInput()
         {
-            
+            Dispatcher.Invoke(() => Status.Value = 5);
             string select_folder = PATH_FOR_LOAD + Dispatcher.Invoke(() => Combo.SelectedItem.ToString()) + @"\";
+            Dispatcher.Invoke(() => Status.Value = 15);
             string select_ico_project = PATH_FOR_LOAD + Dispatcher.Invoke(() => Combo.SelectedItem.ToString().Remove(Combo.SelectedItem.ToString().Length - 3));
-            
+            Dispatcher.Invoke(() => Status.Value = 20);
             //DirectoryCopy(select_folder, Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory) + @"\go\", true);
 
             if (!Directory.Exists(Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory) + @"\LOAD"))
@@ -98,15 +99,27 @@ namespace LOADER
 
                 System.IO.Directory.CreateDirectory(Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory) + @"\LOAD");
             }
-
+            
             else
             {
                 Directory.Delete(Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory) + @"\LOAD", true);
                 System.IO.Directory.CreateDirectory(Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory) + @"\LOAD");
             }
-
-
+            var word = select_ico_project.Split('\\')[6];
+            Console.WriteLine(word);
+            Dispatcher.Invoke(() => Status.Value = 50);
             DirectoryCopy(select_folder, Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory) + @"\LOAD\", true);
+            try
+            {
+                File.Copy(select_ico_project, Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory) + @"\LOAD\" + word);
+            }
+            catch
+            {
+                MessageBox.Show("я не нашёл отдельный файл запуска, но всё равно продолжу установку!");
+            }
+            Dispatcher.Invoke(() => Status.Value = 100);
+
+            Thread.Sleep(1000);
         }
 
         private void start_loading_PreviewMouseLeftButtonDown(object sender, MouseButtonEventArgs e)
@@ -118,16 +131,21 @@ namespace LOADER
             
 
 
+
         }
 
         public void strah()
         {
-            Dispatcher.Invoke(() => Setka.Visibility = Visibility.Hidden);
+            Dispatcher.Invoke(() => STOP_LAUNCHER.Visibility = Visibility.Visible);
+
         }
 
         public void krah()
         {
             start_loading_TextInput();
+            Dispatcher.Invoke(() => STOP_LAUNCHER.Visibility = Visibility.Hidden);
+            Dispatcher.Invoke(() => Status.Value = 0);
+
         }
 
 

@@ -100,5 +100,8 @@
   <ItemGroup>
     <Resource Include="4003977-christmas-emoji-santa-sleep-tired_112988.ico" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="1495.gif" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
